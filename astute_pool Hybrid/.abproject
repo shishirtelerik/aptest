@@ -16,22 +16,36 @@
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "FrameworkVersion": "3.7.0",
   "AndroidPermissions": [
+    "android.permission.ACCESS_CHECKIN_PROPERTIES",
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+    "android.permission.CAMERA",
+    "android.permission.CONTROL_LOCATION_UPDATES",
     "android.permission.INTERNET"
   ],
   "DeviceOrientations": [
-    "Portrait",
-    "Landscape"
+    "Portrait"
   ],
-  "AndroidHardwareAcceleration": "false",
+  "AndroidHardwareAcceleration": "True",
   "iOSStatusBarStyle": "Default",
   "Framework": "Cordova",
   "WP8TileTitle": "",
   "WP8Publisher": "",
   "WP8Capabilities": [
+    "ID_CAP_IDENTITY_DEVICE",
+    "ID_CAP_IDENTITY_USER",
+    "ID_CAP_ISV_CAMERA",
+    "ID_CAP_LOCATION",
+    "ID_CAP_MAP",
     "ID_CAP_NETWORKING",
+    "ID_CAP_RINGTONE_ADD",
+    "ID_CAP_WALLET",
     "ID_CAP_WEBBROWSERCOMPONENT"
   ],
-  "WP8Requirements": [],
+  "WP8Requirements": [
+    "ID_REQ_REARCAMERA"
+  ],
   "WP8PublisherID": "{b61c3096-696d-4431-9267-290d0d8e6503}",
   "WP8ProductID": "{88e6ee8e-7d76-4e92-8a5c-bccfa6a35cb4}",
   "WPSdk": "8.0",
@@ -43,6 +57,27 @@
     "ID_RESOLUTION_HD720P"
   ],
   "CorePlugins": [
-    "org.apache.cordova.network-information"
+    "com.couchbase.lite.phonegap@1.0.5",
+    "com.synconset.imagepicker@1.0.6",
+    "nl.x-services.plugins.actionsheet@1.1.7",
+    "org.apache.cordova.battery-status",
+    "org.apache.cordova.camera",
+    "org.apache.cordova.console",
+    "org.apache.cordova.contacts",
+    "org.apache.cordova.device",
+    "org.apache.cordova.device-motion",
+    "org.apache.cordova.device-orientation",
+    "org.apache.cordova.dialogs",
+    "org.apache.cordova.file",
+    "org.apache.cordova.file-transfer",
+    "org.apache.cordova.geolocation",
+    "org.apache.cordova.globalization",
+    "org.apache.cordova.inappbrowser",
+    "org.apache.cordova.keyboard",
+    "org.apache.cordova.media-capture",
+    "org.apache.cordova.network-information",
+    "org.apache.cordova.splashscreen",
+    "org.apache.cordova.statusbar",
+    "org.apache.cordova.vibration"
   ]
 }
