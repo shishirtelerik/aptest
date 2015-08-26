@@ -10,7 +10,7 @@ app.login = kendo.observable({
 (function(parent) {
     var provider = app.data.defaultProvider,
         mode = 'signin',
-        registerRedirect = 'home',
+        registerRedirect = 'userdetails',
         signinRedirect = 'home',
         init = function(error) {
             if (error) {

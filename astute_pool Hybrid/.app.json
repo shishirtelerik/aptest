@@ -59,7 +59,7 @@
           "registerPasswordLabel": "Password",
           "registerNameLabel": "Name",
           "registerLabel": "Register",
-          "registerRedirect": "home",
+          "registerRedirect": "userdetails",
           "gotoSigninLabel": "Sign In"
         }
       ],
