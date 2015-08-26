@@ -3,7 +3,15 @@
   "views": [
     {
       "type": "view",
-      "components": [],
+      "components": [
+        {
+          "type": "form",
+          "components": [],
+          "name": "homeModel",
+          "submitButton": "Register",
+          "cancelButton": "Login"
+        }
+      ],
       "name": "home",
       "title": "Home",
       "addToNavigation": true,
@@ -38,21 +46,6 @@
       "type": "view",
       "components": [
         {
-          "type": "form",
-          "components": [],
-          "name": "formViewModel",
-          "submitButton": "Login",
-          "cancelButton": "Register"
-        }
-      ],
-      "name": "formView",
-      "title": "Welcome",
-      "addToNavigation": false
-    },
-    {
-      "type": "view",
-      "components": [
-        {
           "type": "authentication",
           "name": "loginModel",
           "dataProvider": "defaultProvider",
@@ -74,6 +67,91 @@
       "title": "Login",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "form",
+          "components": [
+            {
+              "type": "field",
+              "name": "username",
+              "title": "Username",
+              "inputType": "text",
+              "placeholder": "johndoe"
+            },
+            {
+              "type": "field",
+              "name": "tel",
+              "title": "Phone",
+              "inputType": "tel",
+              "placeholder": "+123 444 555 666"
+            },
+            {
+              "type": "field",
+              "name": "address",
+              "title": "Current Address",
+              "inputType": "group-separator"
+            },
+            {
+              "type": "field",
+              "name": "addres",
+              "title": "Address",
+              "inputType": "text",
+              "placeholder": "Address Line 1"
+            },
+            {
+              "type": "field",
+              "name": "cureentaddress2",
+              "title": "Address",
+              "inputType": "text",
+              "placeholder": "Address Line 2"
+            },
+            {
+              "type": "field",
+              "name": "locality",
+              "title": "Locality",
+              "inputType": "text",
+              "placeholder": "Locality"
+            },
+            {
+              "type": "field",
+              "name": "currentcity",
+              "title": "City",
+              "inputType": "text",
+              "placeholder": "Current City"
+            },
+            {
+              "type": "field",
+              "name": "currentstate",
+              "title": "State",
+              "inputType": "text",
+              "placeholder": "Current State"
+            },
+            {
+              "type": "field",
+              "name": "country",
+              "title": "Country",
+              "inputType": "text",
+              "placeholder": "Current Country"
+            },
+            {
+              "type": "field",
+              "name": "sameaddress",
+              "title": "Same As Current Address",
+              "inputType": "checkbox"
+            }
+          ],
+          "name": "userdetailsModel",
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "name": "userdetails",
+      "title": "User Details",
+      "addToNavigation": true,
+      "icon": "bookmarks"
     }
   ],
   "dataProviders": [
@@ -89,7 +167,7 @@
   ],
   "name": "kendoUiMobileApp",
   "navigation": "tabstrip",
-  "view": "home",
-  "transition": "slide",
-  "skin": "flat"
+  "view": "login",
+  "transition": "zoom",
+  "skin": "native"
 }

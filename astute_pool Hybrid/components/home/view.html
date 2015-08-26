@@ -1,4 +1,17 @@
 <div data-role="view" data-title="Home" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
+    <div id="homeModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: homeModel.cancel }">Login</a>
+                <a class="primary" data-role="button" data-bind="events: { click: homeModel.submit }">Register</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_homeModel -->
+        <!-- END_CUSTOM_CODE_homeModel -->
+    </div>
     <!-- START_CUSTOM_CODE_home -->
     <!-- END_CUSTOM_CODE_home -->
 </div>

@@ -1,0 +1,65 @@
+<div data-role="view" data-title="User Details" data-layout="main" data-model="app.userdetails" data-show="app.userdetails.onShow" data-after-show="app.userdetails.afterShow">
+    <div id="userdetailsModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li>
+                    <label>Username
+                        <input data-bind="value: userdetailsModel.fields.username" placeholder="johndoe" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Phone
+                        <input data-bind="value: userdetailsModel.fields.tel" placeholder="+123 444 555 666" type="tel">
+                    </label>
+                </li>
+                <li class="group-separator">
+                    <h4 class="group-separator-header">Current Address</h4>
+                </li>
+                <li>
+                    <label>Address
+                        <input data-bind="value: userdetailsModel.fields.addres" placeholder="Address Line 1" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Address
+                        <input data-bind="value: userdetailsModel.fields.cureentaddress2" placeholder="Address Line 2" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Locality
+                        <input data-bind="value: userdetailsModel.fields.locality" placeholder="Locality" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>City
+                        <input data-bind="value: userdetailsModel.fields.currentcity" placeholder="Current City" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>State
+                        <input data-bind="value: userdetailsModel.fields.currentstate" placeholder="Current State" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Country
+                        <input data-bind="value: userdetailsModel.fields.country" placeholder="Current Country" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Same As Current Address
+                        <input data-bind="value: userdetailsModel.fields.sameaddress" type="checkbox">
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: userdetailsModel.cancel }">Cancel</a>
+                <a class="primary" data-role="button" data-bind="events: { click: userdetailsModel.submit }">Confirm</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_userdetailsModel -->
+        <!-- END_CUSTOM_CODE_userdetailsModel -->
+    </div>
+    <!-- START_CUSTOM_CODE_userdetails -->
+    <!-- END_CUSTOM_CODE_userdetails -->
+</div>
