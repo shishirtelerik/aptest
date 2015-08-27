@@ -1,0 +1,27 @@
+<div data-role="view" data-title="Terms &amp; Conditions" data-layout="main" data-model="app.termsncondition" data-show="app.termsncondition.onShow" data-after-show="app.termsncondition.afterShow">
+    <div id="termsnconditionModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li>
+                    <label>I Accept terms and conditions set by astute pool
+                        <input data-bind="value: termsnconditionModel.fields.tnc1" type="checkbox">
+                    </label>
+                </li>
+                <li>
+                    <label>I Accept terms and conditions set by astute pool
+                        <input data-bind="value: termsnconditionModel.fields.tnc2" type="checkbox">
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: termsnconditionModel.cancel }">Cancel</a>
+                <a class="primary" data-role="button" data-bind="events: { click: termsnconditionModel.submit }">Confirm</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_termsnconditionModel -->
+        <!-- END_CUSTOM_CODE_termsnconditionModel -->
+    </div>
+    <!-- START_CUSTOM_CODE_termsncondition -->
+    <!-- END_CUSTOM_CODE_termsncondition -->
+</div>

@@ -6,17 +6,7 @@
     <meta charset="utf-8">
     <link href="bower_components/kendo-ui-appbuilder-core/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-      <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 100%;
-      }
-    </style>
+
     <!-- cordova script (this will be a 404 during development if served with `grunt serve`) -->
     <script src="cordova.js"></script>
 
@@ -26,12 +16,12 @@
     <script src="lib/progress/progress.all.min.js"></script>
     <script src="app.js"></script>
     <script src="dataProviders/defaultProvider.js"></script>
-    
-    
-    
+    <script src="dataProviders/astutePoolBackend.js"></script>
 </head>
 
 <body id="kendoUiMobileApp">
+    <script src="components/termsncondition/index.js"></script>
+    <script src="components/documents/index.js"></script>
     <script src="components/userdetails/index.js"></script>
     <script src="components/login/index.js"></script>
     <script src="components/aboutView/index.js"></script>
@@ -51,6 +41,8 @@
                 <a href="components/aboutView/view.html" data-icon="info">About</a>
                 <a href="components/login/view.html" data-icon="home">Login</a>
                 <a href="components/userdetails/view.html" data-icon="bookmarks">User Details</a>
+                <a href="components/documents/view.html" data-icon="bookmarks">Required Documents</a>
+                <a href="components/termsncondition/view.html" data-icon="bookmarks">Terms &amp; Conditions</a>
             </div>
         </footer>
     </div>

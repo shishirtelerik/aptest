@@ -1,27 +1,27 @@
 <div data-role="view" data-title="Required Documents" data-layout="main" data-model="app.documents" data-show="app.documents.onShow" data-after-show="app.documents.afterShow">
-    <div id="documentsModel" class="form-view" style="margin-top:20%">
+    <div id="documentsModel" class="form-view">
         <form>
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li>
-                    <label>Address Proof                
-                        <input data-bind="value: documentsModel.fields.addressproof" placeholder="johndoe" type="file">
+                    <label>Username
+                        <input data-bind="value: documentsModel.fields.username1" placeholder="johndoe" type="text">
                     </label>
                 </li>
                 <li>
-                    <label>ID Proof
-                        <input data-bind="value: documentsModel.fields.idproof" placeholder="johndoe" type="file">
+                    <label>Username
+                        <input data-bind="value: documentsModel.fields.username2" placeholder="johndoe" type="text">
                     </label>
                 </li>
                 <li>
-                    <label>Other Documents
-                        <input data-bind="value: documentsModel.fields.otherproof" placeholder="johndoe" type="file">
+                    <label>Username
+                        <input data-bind="value: documentsModel.fields.username3" placeholder="johndoe" type="text">
                     </label>
                 </li>
             </ul>
 
             <div class="button-group">
                 <a data-role="button" data-bind="events: { click: documentsModel.cancel }">Cancel</a>
-                <a class="primary" data-role="button" data-bind="events: { click: documentsModel.submit }">Submit</a>
+                <a class="primary" data-role="button" data-bind="events: { click: documentsModel.submit }">Confirm</a>
             </div>
         </form>
         <!-- START_CUSTOM_CODE_documentsModel -->
