@@ -1,0 +1,27 @@
+<div data-role="view" data-title="Tearms &amp; Conditions" data-layout="main" data-model="app.tearmsncondition" data-show="app.tearmsncondition.onShow" data-after-show="app.tearmsncondition.afterShow">
+    <div id="tearmsnconditionModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li>
+                    <label>Accept Tearms&amp;condition 1
+                        <input data-bind="value: tearmsnconditionModel.fields.tearmscondition1" type="checkbox">
+                    </label>
+                </li>
+                <li>
+                    <label>Accept Tearms&amp;condition 2
+                        <input data-bind="value: tearmsnconditionModel.fields.checkbox1" type="checkbox">
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: tearmsnconditionModel.cancel }">Cancel</a>
+                <a class="primary" data-role="button" data-bind="events: { click: tearmsnconditionModel.submit }">NEXT</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_tearmsnconditionModel -->
+        <!-- END_CUSTOM_CODE_tearmsnconditionModel -->
+    </div>
+    <!-- START_CUSTOM_CODE_tearmsncondition -->
+    <!-- END_CUSTOM_CODE_tearmsncondition -->
+</div>

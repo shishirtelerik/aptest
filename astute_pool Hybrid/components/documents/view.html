@@ -1,10 +1,20 @@
 <div data-role="view" data-title="Required Documents" data-layout="main" data-model="app.documents" data-show="app.documents.onShow" data-after-show="app.documents.afterShow">
-    <div id="documentsModel" class="form-view">
+    <div id="documentsModel" class="form-view" style="margin-top:20%">
         <form>
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li>
-                    <label>Username
-                        <input data-bind="value: documentsModel.fields.username1" placeholder="johndoe" type="text">
+                    <label>Address Proof                
+                        <input data-bind="value: documentsModel.fields.addressproof" placeholder="johndoe" type="file">
+                    </label>
+                </li>
+                <li>
+                    <label>ID Proof
+                        <input data-bind="value: documentsModel.fields.idproof" placeholder="johndoe" type="file">
+                    </label>
+                </li>
+                <li>
+                    <label>Other Documents
+                        <input data-bind="value: documentsModel.fields.otherproof" placeholder="johndoe" type="file">
                     </label>
                 </li>
             </ul>

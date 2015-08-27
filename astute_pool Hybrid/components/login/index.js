@@ -8,7 +8,7 @@ app.login = kendo.observable({
 // START_CUSTOM_CODE_login
 // END_CUSTOM_CODE_login
 (function(parent) {
-    var provider = app.data.defaultProvider,
+    var provider = app.data.astutePoolBackend,
         mode = 'signin',
         registerRedirect = 'userdetails',
         signinRedirect = 'home',

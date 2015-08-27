@@ -48,7 +48,7 @@
         {
           "type": "authentication",
           "name": "loginModel",
-          "dataProvider": "defaultProvider",
+          "dataProvider": "astutePoolBackend",
           "emailLabel": "Email",
           "passwordLabel": "Password",
           "signinLabel": "Sign In",
@@ -224,6 +224,35 @@
       "title": "Required Documents",
       "addToNavigation": true,
       "icon": "bookmarks"
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "form",
+          "components": [
+            {
+              "type": "field",
+              "name": "tearmscondition1",
+              "title": "Accept Tearms&condition 1",
+              "inputType": "checkbox"
+            },
+            {
+              "type": "field",
+              "name": "checkbox1",
+              "title": "Accept Tearms&condition 2",
+              "inputType": "checkbox"
+            }
+          ],
+          "name": "tearmsnconditionModel",
+          "submitButton": "NEXT",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "name": "tearmsncondition",
+      "title": "Tearms & Conditions",
+      "addToNavigation": true,
+      "icon": "bookmarks"
     }
   ],
   "dataProviders": [
@@ -232,6 +261,15 @@
       "everliveUrl": "//platform.telerik.com/bs-api/v1/",
       "name": "defaultProvider",
       "title": "DefaultProvider",
+      "source": "everlive",
+      "everliveKey": "7t14dTbwPV9cQ5sM",
+      "offlineStorage": true
+    },
+    {
+      "type": "dataProvider",
+      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "name": "astutePoolBackend",
+      "title": "astute_pool / astute_pool Backend",
       "source": "everlive",
       "everliveKey": "7t14dTbwPV9cQ5sM",
       "offlineStorage": true
