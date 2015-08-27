@@ -141,6 +141,54 @@
               "name": "sameaddress",
               "title": "Same As Current Address",
               "inputType": "checkbox"
+            },
+            {
+              "type": "field",
+              "name": "permanent",
+              "title": "Permanent Address",
+              "inputType": "group-separator"
+            },
+            {
+              "type": "field",
+              "name": "permanentaddress",
+              "title": "Address",
+              "inputType": "text",
+              "placeholder": "Address Line 1"
+            },
+            {
+              "type": "field",
+              "name": "permanentaddress2",
+              "title": "Address 2",
+              "inputType": "text",
+              "placeholder": "Address Line 2"
+            },
+            {
+              "type": "field",
+              "name": "parmanentlocality",
+              "title": "Locality",
+              "inputType": "text",
+              "placeholder": "Locality"
+            },
+            {
+              "type": "field",
+              "name": "permanentcity",
+              "title": "City",
+              "inputType": "text",
+              "placeholder": "Permanent City"
+            },
+            {
+              "type": "field",
+              "name": "permanentstate",
+              "title": "State",
+              "inputType": "text",
+              "placeholder": "Permanent State"
+            },
+            {
+              "type": "field",
+              "name": "country2",
+              "title": "Country",
+              "inputType": "text",
+              "placeholder": "Permanent Country"
             }
           ],
           "name": "userdetailsModel",
@@ -150,6 +198,22 @@
       ],
       "name": "userdetails",
       "title": "User Details",
+      "addToNavigation": true,
+      "icon": "bookmarks"
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "form",
+          "components": [],
+          "name": "documentsModel",
+          "submitButton": "Submit",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "name": "documents",
+      "title": "Required Documents",
       "addToNavigation": true,
       "icon": "bookmarks"
     }

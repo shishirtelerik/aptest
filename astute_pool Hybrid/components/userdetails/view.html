@@ -9,7 +9,7 @@
                 </li>
                 <li>
                     <label>Phone
-                        <input data-bind="value: userdetailsModel.fields.tel" placeholder="+123 444 555 666" type="tel" maxlength="10">
+                        <input data-bind="value: userdetailsModel.fields.tel" placeholder="+123 444 555 666" type="tel">
                     </label>
                 </li>
                 <li class="group-separator">
@@ -48,6 +48,39 @@
                 <li>
                     <label>Same As Current Address
                         <input data-bind="value: userdetailsModel.fields.sameaddress" type="checkbox">
+                    </label>
+                </li>
+                <li class="group-separator">
+                    <h4 class="group-separator-header">Permanent Address</h4>
+                </li>
+                <li>
+                    <label>Address
+                        <input data-bind="value: userdetailsModel.fields.permanentaddress" placeholder="Address Line 1" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Address 2
+                        <input data-bind="value: userdetailsModel.fields.permanentaddress2" placeholder="Address Line 2" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Locality
+                        <input data-bind="value: userdetailsModel.fields.parmanentlocality" placeholder="Locality" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>City
+                        <input data-bind="value: userdetailsModel.fields.permanentcity" placeholder="Permanent City" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>State
+                        <input data-bind="value: userdetailsModel.fields.permanentstate" placeholder="Permanent State" type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>Country
+                        <input data-bind="value: userdetailsModel.fields.country2" placeholder="Permanent Country" type="text">
                     </label>
                 </li>
             </ul>

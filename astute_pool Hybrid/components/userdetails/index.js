@@ -10,6 +10,13 @@ app.userdetails = kendo.observable({
 (function(parent) {
     var userdetailsModel = kendo.observable({
         fields: {
+            country2: '',
+            permanentstate: '',
+            permanentcity: '',
+            parmanentlocality: '',
+            permanentaddress2: '',
+            permanentaddress: '',
+            permanent: '',
             sameaddress: '',
             country: '',
             currentstate: '',
