@@ -206,7 +206,15 @@
       "components": [
         {
           "type": "form",
-          "components": [],
+          "components": [
+            {
+              "type": "field",
+              "name": "username1",
+              "title": "Username",
+              "inputType": "text",
+              "placeholder": "johndoe"
+            }
+          ],
           "name": "documentsModel",
           "submitButton": "Submit",
           "cancelButton": "Cancel"

@@ -9,7 +9,9 @@ app.documents = kendo.observable({
 // END_CUSTOM_CODE_documents
 (function(parent) {
     var documentsModel = kendo.observable({
-        fields: {},
+        fields: {
+            username1: '',
+        },
         submit: function() {},
         cancel: function() {}
     });
