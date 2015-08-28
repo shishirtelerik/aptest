@@ -17,70 +17,92 @@
                 </li>
                 <li>
                     <label>Address
-                        <input data-bind="value: userdetailsModel.fields.addres" placeholder="Address Line 1" type="text">
+                        <input data-bind="value: userdetailsModel.fields.addres" placeholder="Address Line 1" name="cadd1" type="text">
                     </label>
                 </li>
                 <li>
                     <label>Address
-                        <input data-bind="value: userdetailsModel.fields.cureentaddress2" placeholder="Address Line 2" type="text">
+                        <input data-bind="value: userdetailsModel.fields.cureentaddress2" placeholder="Address Line 2" name="cadd2" type="text">
                     </label>
                 </li>
                 <li>
                     <label>Locality
-                        <input id="autocomplete" data-bind="value: userdetailsModel.fields.locality" placeholder="Locality" onFocus="geolocate()" type="text">
+                        <input id="autocomplete" data-bind="value: userdetailsModel.fields.locality" placeholder="Locality" name="cloc"onFocus="geolocate()" type="text">
                     </label>
                 </li>
                 <li>
                     <label>City
-                        <input id="locality" data-bind="value: userdetailsModel.fields.currentcity" placeholder="Current City" type="text">
+                        <input id="locality" data-bind="value: userdetailsModel.fields.currentcity" placeholder="Current City" name="ccity" type="text">
                     </label>
                 </li>
                 <li>
                     <label>State
-                        <input id="administrative_area_level_1" data-bind="value: userdetailsModel.fields.currentstate" placeholder="Current State" type="text">
+                        <input id="administrative_area_level_1" data-bind="value: userdetailsModel.fields.currentstate" placeholder="Current State" name="cstate" type="text">
                     </label>
                 </li>
                 <li>
                     <label>Country
-                        <input id="country" data-bind="value: userdetailsModel.fields.country" placeholder="Current Country" type="text">
+                        <input id="country" data-bind="value: userdetailsModel.fields.country" placeholder="Current Country" name="ccountry" type="text">
                     </label>
                 </li>
                 <li>
                     <label>Same As Current Address
-                        <input data-bind="value: userdetailsModel.fields.sameaddress" type="checkbox">
+                        <input name="billingtoo" data-bind="value: userdetailsModel.fields.sameaddress" onclick="FillBilling(this.form)" type="checkbox">
                     </label>
                 </li>
+                <script>
+                    function FillBilling(f) {
+                        if (f.billingtoo.checked == true) {
+                            f.padd1.value = f.cadd1.value;
+                            f.padd2.value = f.cadd2.value;
+                            f.ploc.value = f.cloc.value;
+                            f.pcity.value = f.ccity.value;
+                            f.pstate.value = f.cstate.value;
+                            f.pcountry.value = f.ccountry.value;
+                            
+                        }
+                         if (f.billingtoo.checked == false) {
+                            f.padd1.value = "";
+                            f.padd2.value = "";
+                            f.pcity.value = "";
+                             f.ploc.value = "";
+                            f.pstate.value = "";
+                            f.pcountry.value = "";
+                            
+                        }
+                    }
+                </script>
                 <li class="group-separator">
                     <h4 class="group-separator-header">Permanent Address</h4>
                 </li>
                 <li>
                     <label>Address
-                        <input data-bind="value: userdetailsModel.fields.permanentaddress" placeholder="Address Line 1" type="text">
+                        <input data-bind="value: userdetailsModel.fields.permanentaddress" placeholder="Address Line 1" name="padd1" type="text">
                     </label>
                 </li>
                 <li>
                     <label>Address 2
-                        <input data-bind="value: userdetailsModel.fields.permanentaddress2" placeholder="Address Line 2" type="text">
+                        <input data-bind="value: userdetailsModel.fields.permanentaddress2" placeholder="Address Line 2" name="padd2" type="text">
                     </label>
                 </li>
                 <li>
                     <label>Locality
-                        <input data-bind="value: userdetailsModel.fields.parmanentlocality" placeholder="Locality" type="text">
+                        <input data-bind="value: userdetailsModel.fields.parmanentlocality" placeholder="Locality" name="ploc" type="text">
                     </label>
                 </li>
                 <li>
                     <label>City
-                        <input data-bind="value: userdetailsModel.fields.permanentcity" placeholder="Permanent City" type="text">
+                        <input data-bind="value: userdetailsModel.fields.permanentcity" placeholder="Permanent City" name="pcity" type="text">
                     </label>
                 </li>
                 <li>
                     <label>State
-                        <input data-bind="value: userdetailsModel.fields.permanentstate" placeholder="Permanent State" type="text">
+                        <input data-bind="value: userdetailsModel.fields.permanentstate" placeholder="Permanent State"name="pstate" type="text">
                     </label>
                 </li>
                 <li>
                     <label>Country
-                        <input data-bind="value: userdetailsModel.fields.country2" placeholder="Permanent Country" type="text">
+                        <input data-bind="value: userdetailsModel.fields.country2" placeholder="Permanent Country" name="pcountry" type="text">
                     </label>
                 </li>
             </ul>
@@ -94,10 +116,10 @@
             // of the Google Places API to help users fill in the information.
 
             var placeSearch, autocomplete;
-            var componentForm = {          
+            var componentForm = {
                 locality: 'long_name',
                 administrative_area_level_1: 'short_name',
-                country: 'long_name',                
+                country: 'long_name',
             };
 
             function initAutocomplete() {
@@ -156,8 +178,7 @@
                 }
                 // [END region_geolocation]
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initAutocomplete"
-        async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initAutocomplete" async defer></script>
     </div>
     <!-- START_CUSTOM_CODE_userdetails -->
     <!-- END_CUSTOM_CODE_userdetails -->
