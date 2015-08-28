@@ -213,10 +213,24 @@
               "title": "Username",
               "inputType": "text",
               "placeholder": "johndoe"
+            },
+            {
+              "type": "field",
+              "name": "username2",
+              "title": "Username",
+              "inputType": "text",
+              "placeholder": "johndoe"
+            },
+            {
+              "type": "field",
+              "name": "username3",
+              "title": "Username",
+              "inputType": "text",
+              "placeholder": "johndoe"
             }
           ],
           "name": "documentsModel",
-          "submitButton": "Submit",
+          "submitButton": "Confirm",
           "cancelButton": "Cancel"
         }
       ],
@@ -233,24 +247,24 @@
           "components": [
             {
               "type": "field",
-              "name": "tearmscondition1",
-              "title": "Accept Tearms&condition 1",
+              "name": "tnc1",
+              "title": "I Accept terms and conditions set by astute pool",
               "inputType": "checkbox"
             },
             {
               "type": "field",
-              "name": "checkbox1",
-              "title": "Accept Tearms&condition 2",
+              "name": "tnc2",
+              "title": "I Accept terms and conditions set by astute pool",
               "inputType": "checkbox"
             }
           ],
-          "name": "tearmsnconditionModel",
-          "submitButton": "NEXT",
+          "name": "termsnconditionModel",
+          "submitButton": "Confirm",
           "cancelButton": "Cancel"
         }
       ],
-      "name": "tearmsncondition",
-      "title": "Tearms & Conditions",
+      "name": "termsncondition",
+      "title": "Terms & Conditions",
       "addToNavigation": true,
       "icon": "bookmarks"
     }

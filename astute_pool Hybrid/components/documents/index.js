@@ -10,6 +10,8 @@ app.documents = kendo.observable({
 (function(parent) {
     var documentsModel = kendo.observable({
         fields: {
+            username3: '',
+            username2: '',
             username1: '',
         },
         submit: function() {},
