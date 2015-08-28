@@ -86,7 +86,7 @@
               "name": "tel",
               "title": "Phone",
               "inputType": "tel",
-              "placeholder": "10-Digit Mobile Number"
+              "placeholder": "+123 444 555 666"
             },
             {
               "type": "field",
@@ -189,26 +189,6 @@
               "title": "Country",
               "inputType": "text",
               "placeholder": "Permanent Country"
-            },
-            {
-              "type": "field",
-              "name": "emergencycontact",
-              "title": "Emergency Contact",
-              "inputType": "group-separator"
-            },
-            {
-              "type": "field",
-              "name": "emergencyname",
-              "title": "Name",
-              "inputType": "text",
-              "placeholder": "Emg Name"
-            },
-            {
-              "type": "field",
-              "name": "emgmobile",
-              "title": "Mobile Number",
-              "inputType": "tel",
-              "placeholder": "10-Digit Mobile Number"
             }
           ],
           "name": "userdetailsModel",

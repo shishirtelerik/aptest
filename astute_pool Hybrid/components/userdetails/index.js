@@ -10,9 +10,6 @@ app.userdetails = kendo.observable({
 (function(parent) {
     var userdetailsModel = kendo.observable({
         fields: {
-            emgmobile: '',
-            emergencyname: '',
-            emergencycontact: '',
             country2: '',
             permanentstate: '',
             permanentcity: '',
