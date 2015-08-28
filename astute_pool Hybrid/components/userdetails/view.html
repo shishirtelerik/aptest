@@ -1,6 +1,6 @@
 <div data-role="view" data-title="User Details" data-layout="main" data-model="app.userdetails" data-show="app.userdetails.onShow" data-after-show="app.userdetails.afterShow">
     <div id="userdetailsModel" class="form-view">
-        <form>
+        <form enctype="multipart/form-data" method="post" action="">
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li>
                     <label>Username
@@ -27,22 +27,22 @@
                 </li>
                 <li>
                     <label>Locality
-                        <input data-bind="value: userdetailsModel.fields.locality" placeholder="Locality" type="text">
+                        <input id="autocomplete" data-bind="value: userdetailsModel.fields.locality" placeholder="Locality" onFocus="geolocate()" type="text">
                     </label>
                 </li>
                 <li>
                     <label>City
-                        <input data-bind="value: userdetailsModel.fields.currentcity" placeholder="Current City" type="text">
+                        <input id="locality" data-bind="value: userdetailsModel.fields.currentcity" placeholder="Current City" type="text">
                     </label>
                 </li>
                 <li>
                     <label>State
-                        <input data-bind="value: userdetailsModel.fields.currentstate" placeholder="Current State" type="text">
+                        <input id="administrative_area_level_1" data-bind="value: userdetailsModel.fields.currentstate" placeholder="Current State" type="text">
                     </label>
                 </li>
                 <li>
                     <label>Country
-                        <input data-bind="value: userdetailsModel.fields.country" placeholder="Current Country" type="text">
+                        <input id="country" data-bind="value: userdetailsModel.fields.country" placeholder="Current Country" type="text">
                     </label>
                 </li>
                 <li>
@@ -84,14 +84,80 @@
                     </label>
                 </li>
             </ul>
-
             <div class="button-group">
                 <a data-role="button" data-bind="events: { click: userdetailsModel.cancel }">Cancel</a>
                 <a class="primary" data-role="button" data-bind="events: { click: userdetailsModel.submit }">Confirm</a>
             </div>
         </form>
-        <!-- START_CUSTOM_CODE_userdetailsModel -->
-        <!-- END_CUSTOM_CODE_userdetailsModel -->
+        <script>
+            // This example displays an address form, using the autocomplete feature
+            // of the Google Places API to help users fill in the information.
+
+            var placeSearch, autocomplete;
+            var componentForm = {          
+                locality: 'long_name',
+                administrative_area_level_1: 'short_name',
+                country: 'long_name',                
+            };
+
+            function initAutocomplete() {
+                // Create the autocomplete object, restricting the search to geographical
+                // location types.
+                autocomplete = new google.maps.places.Autocomplete(
+                    /** @type {!HTMLInputElement} */
+                    (document.getElementById('autocomplete')), {
+                        types: ['geocode']
+                    });
+
+                // When the user selects an address from the dropdown, populate the address
+                // fields in the form.
+                autocomplete.addListener('place_changed', fillInAddress);
+            }
+
+            // [START region_fillform]
+            function fillInAddress() {
+                    // Get the place details from the autocomplete object.
+                    var place = autocomplete.getPlace();
+
+                    for (var component in componentForm) {
+                        document.getElementById(component).value = '';
+                        document.getElementById(component).disabled = false;
+                    }
+
+                    // Get each component of the address from the place details
+                    // and fill the corresponding field on the form.
+                    for (var i = 0; i < place.address_components.length; i++) {
+                        var addressType = place.address_components[i].types[0];
+                        if (componentForm[addressType]) {
+                            var val = place.address_components[i][componentForm[addressType]];
+                            document.getElementById(addressType).value = val;
+                        }
+                    }
+                }
+                // [END region_fillform]
+
+            // [START region_geolocation]
+            // Bias the autocomplete object to the user's geographical location,
+            // as supplied by the browser's 'navigator.geolocation' object.
+            function geolocate() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function (position) {
+                            var geolocation = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            };
+                            var circle = new google.maps.Circle({
+                                center: geolocation,
+                                radius: position.coords.accuracy
+                            });
+                            autocomplete.setBounds(circle.getBounds());
+                        });
+                    }
+                }
+                // [END region_geolocation]
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initAutocomplete"
+        async defer></script>
     </div>
     <!-- START_CUSTOM_CODE_userdetails -->
     <!-- END_CUSTOM_CODE_userdetails -->
