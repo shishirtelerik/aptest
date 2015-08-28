@@ -8,7 +8,7 @@ app.userdetails = kendo.observable({
 // START_CUSTOM_CODE_userdetails
 // END_CUSTOM_CODE_userdetails
 (function(parent) {
-    var provider = app.data.astutePoolBackend,
+    
     var userdetailsModel = kendo.observable({
         fields: {
             country2: '',
