@@ -199,7 +199,7 @@
       "name": "userdetails",
       "title": "User Details",
       "addToNavigation": true,
-      "icon": "bookmarks"
+      "icon": "contacts"
     },
     {
       "type": "view",
@@ -291,7 +291,7 @@
   ],
   "name": "kendoUiMobileApp",
   "navigation": "tabstrip",
-  "view": "login",
+  "view": "userdetails",
   "transition": "zoom",
   "skin": "native"
 }

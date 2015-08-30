@@ -12,7 +12,7 @@
                 // you can change the default transition (slide, zoom or fade)
                 transition: 'zoom',
                 // the application needs to know which view to load first
-                initial: 'components/login/view.html',
+                initial: 'components/userdetails/view.html',
                 statusBarStyle: 'black-translucent'
             });
         });
