@@ -8,6 +8,7 @@ app.userdetails = kendo.observable({
 // START_CUSTOM_CODE_userdetails
 // END_CUSTOM_CODE_userdetails
 (function(parent) {
+    
     var userdetailsModel = kendo.observable({
         fields: {
             country2: '',
@@ -28,7 +29,9 @@ app.userdetails = kendo.observable({
             tel: '',
             username: '',
         },
-        submit: function() {},
+        submit: function() {
+            
+        },
         cancel: function() {}
     });
 
